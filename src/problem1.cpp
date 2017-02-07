@@ -5,19 +5,15 @@
 
 #include <iostream>
 
-int main(void)
-{
+int main(void) {
     int sum = 0;
     int i = 0;
 
-    while(true)
-    {
-        if(i >= 1000)
-        {
+    while (true) {
+        if (i >= 1000) {
             break;
         }
-        if(i % 3 == 0 || i % 5 == 0)
-        {
+        if (i % 3 == 0 || i % 5 == 0) {
             sum += i;
         }
         i++;
@@ -26,5 +22,5 @@ int main(void)
     std::cout << sum << std::endl;
 
     return 0;
-            
+
 }
