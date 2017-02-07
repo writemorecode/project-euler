@@ -14,8 +14,15 @@ import math
 def compile_file(path):
     filename = os.path.basename(path)
 
+    if os.name == "nt":
+        ext = ".exe"
+    else:
+        ext = ""
+
     source_path = "src/{}".format(filename)
     bin_path = "bin/{}".format(filename)
+
+    bin_path = bin_path.replace(".cpp", ext)
 
     print("Compiling '{}' into '{}'".format(source_path, bin_path))
 
